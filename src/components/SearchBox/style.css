@@ -1,0 +1,28 @@
+.search_box {
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    padding: 10px 20px 10px 40px; /* Espaciado para el icono */
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 250ms ease;
+    
+}
+
+.search_box::placeholder {
+    color: #858484; /* Color del placeholder */
+  }
+
+.search_box:hover {
+    box-shadow: 0 0 0 2px hsla(250, 1%, 44%, 1);
+}
+
+.search_box:focus {
+    box-shadow: 0 0 0 2px hsla(250, 100%, 95%, 1);
+    padding-inline-start: 16px;
+}

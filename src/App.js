@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import FilteredList from '../../list-filter-app/src/components/FilteredList';
+import SearchBox from '../../list-filter-app/src/components/SearchBox';
+import '../../list-filter-app/src/app.css';
+import Header from './components/Header';
 
-function App() {
+
+const App = () => {
+  const [movies, setMovies] = useState([]);
+  const [searchText, setSearchText] = useState('');
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      const API_KEY = 'a85be56dc67f8ab1e609b7a198187160';
+      const pageNumbers = [1, 2, 3, 4, 5, 6, 7]; 
+      const moviePromises = pageNumbers.map(page =>
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`)
+          .then(response => response.json())
+      );
+      const movieResults = await Promise.all(moviePromises);
+      const allMovies = movieResults.flatMap(result => result.results);
+      setMovies(allMovies);
+    };
+
+    fetchMovies();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <main className='main'>
+        <h1>FILTER MOVIE APP</h1>
+        <SearchBox setSearchText={setSearchText} />
+        <FilteredList items={movies} searchText={searchText} />
+      </main>
     </div>
   );
-}
+};
 
 export default App;

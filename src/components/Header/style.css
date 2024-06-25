@@ -1,0 +1,24 @@
+.header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 24px;
+    padding-inline: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    background-color: #000000; 
+    z-index: 5; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.header .logo {
+    margin-inline-end: auto;    
+}
+
+.logo_img {
+    width: 200px;
+}
+

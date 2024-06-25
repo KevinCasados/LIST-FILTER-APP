@@ -1,0 +1,26 @@
+.load-more_button {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-block: 12px;
+    padding-inline: 20px 24px;
+    border-radius: 8px;
+    transition: 250ms ease;
+    cursor: pointer;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.load-more_button:hover {
+    transform: scale(1.05);
+}
+
+.load_more {
+    background-color: hsl(349, 69%, 51%);
+    margin-inline: auto;
+    margin-block: 36px 60px;
+}

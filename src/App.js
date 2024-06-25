@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import FilteredList from '../../list-filter-app/src/components/FilteredList';
-import SearchBox from '../../list-filter-app/src/components/SearchBox';
-import '../../list-filter-app/src/app.css';
+import FilteredList from '../src/components/FilteredList';
+import SearchBox from '../src/components/SearchBox/index';
+import '../src/app.css';
 import Header from './components/Header';
 
 

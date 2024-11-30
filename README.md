@@ -1,3 +1,29 @@
+# LIST-FILTER-APP
+
+## Descripción del Proyecto
+**LIST-FILTER-APP** es una aplicación sencilla desarrollada con React que permite filtrar elementos dentro de una lista. El proyecto implementa funcionalidades dinámicas con JavaScript y utiliza **Styled-Components** para aplicar estilos de manera modular y eficiente.
+
+Este proyecto es un ejemplo básico que demuestra cómo combinar React y Styled-Components para crear interfaces dinámicas y visualmente atractivas.
+
+## Tecnologías Utilizadas
+- **Frontend:**
+  - React.js
+  - JavaScript
+  - Styled-Components
+
+## Funcionalidades Destacadas
+- **Filtrado Dinámico:** Permite buscar elementos en una lista de manera interactiva.
+- **Estilos Modularizados:** Uso de Styled-Components para mantener los estilos encapsulados y organizados.
+- **Diseño Responsivo:** Adaptación a diferentes tamaños de pantalla.
+
+## Instrucciones de Instalación y Uso
+Sigue estos pasos para instalar y ejecutar el proyecto localmente:
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/KevinCasados/LIST-FILTER-APP.git
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
